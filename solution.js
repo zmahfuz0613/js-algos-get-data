@@ -1,12 +1,87 @@
-//WORD INCLUDES 
-//all letters of first word are in second
-const wordIncludes = arr => {
-    let firstWord = arr[0].toLowerCase();
-    let secondWord = arr[1].toLowerCase();
-    for (let letter of secondWord) {
-      // console.log(letter)
-      if (!firstWord.includes(letter)) return false;
+// - Given an array of objects and a string. If a recipe's ingredients include the string return the name(s) of the recipe(s). 
+// - The output should return an array of the recipe(s) names.
+
+const recipesData =
+{
+    data: {
+        recipes: [
+            {
+                style: 'Italian',
+                name: 'Penne with Mushrooms',
+                ingredients: [
+                    "whole wheat penne",
+                    "mushroom",
+                    "butter",
+                    "olive oil",
+                    "tomato sauce"
+                ]
+            },
+            {
+                style: 'Italian',
+                name: 'Eggplant Parm',
+                ingredients: [
+                    "eggplant",
+                    "sub",
+                    "butter",
+                    "olive oil",
+                    "tomato sauce",
+                    "cheese",
+                    "oregano"
+                ]
+            },
+            {
+                style: 'Chinese',
+                name: 'Fried Rice',
+                ingredients: [
+                    "brown Rice",
+                    "Sesame Oil",
+                    "Peanut Oil",
+                    "garlic and ginger",
+                    "snow peas",
+                    "carrot",
+                    "tofu",
+                    "pepper",
+                    "sauce"
+                ]
+            },
+            {
+                style: 'Chinese',
+                name: 'Dumpling',
+                ingredients: [
+                    "flour",
+                    "vegetables",
+                    "soy sauce",
+                ]
+            }
+        ]
     }
-    return true;
-  };
-  console.log(wordIncludes(["hello", "helo"]));
+}
+
+
+
+const getData = (data, str) => {
+
+    results = []
+    indeces = []
+    data.data.recipes.forEach((recipe, index) => {
+        return recipe.ingredients.forEach(ing => {
+           
+            if (ing.toLowerCase().includes(str.toLowerCase())) {
+                          
+                   if(!indeces.includes(index)){
+                    
+                       indeces.push(index)
+                       results.push(recipe.name)
+                   }
+
+            }
+        })
+    })
+    return results
+}
+
+console.log(getData(recipesData, 'oil'))
+
+module.exports = {
+    getData
+}

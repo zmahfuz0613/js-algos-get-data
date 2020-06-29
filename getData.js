@@ -1,3 +1,6 @@
+// - Given an array of objects and a string. If a recipe's ingredients include the string return the name(s) of the recipe(s). 
+// - The output should return an array of the recipe(s) names.
+
 const recipesData =
 {
     data: {
@@ -58,23 +61,6 @@ const recipesData =
 
 const getData = (data, str) => {
 
-    results = []
-    indeces = []
-    data.data.recipes.forEach((recipe, index) => {
-        return recipe.ingredients.forEach(ing => {
-            // console.log(ing)
-            if (ing.toLowerCase().includes(str.toLowerCase())) {
-                // console.log(ing)             
-                   if(!indeces.includes(index)){
-                    //    console.log('indeces', indeces)
-                       indeces.push(index)
-                       results.push(recipe.name)
-                   }
-
-            }
-        })
-    })
-    return results
 }
 
 console.log(getData(recipesData, 'oil'))
