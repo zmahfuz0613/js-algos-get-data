@@ -22,7 +22,7 @@ _Difficulty Rating: Medium_
 
 ### Notes
 
-- For e.g, if one of the ingredients in a given recipe contains Olive Oil and the string you are given is oil, then you should return the name of that recipe.
+- For e.g, if one of the ingredients in a given recipe contains Olive Oil and the string you are given is oil, then the returned array should include the name of that recipe, and any other recipes that include oil in their ingredients.
 
 - The array should not contain the same recipe name more than once. This might happen if the same recipe contains more than one oil.
 
