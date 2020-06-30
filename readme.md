@@ -16,8 +16,8 @@ _Difficulty Rating: Medium_
 ### Getting Started
 
 - Fork and clone this repo.
-- Run `bundle` from within the repo.
-- Run `rspec` to make sure the tests work. (They should fail at first.)
+- Run `npm i` from within the repo.
+- Run `npm run test` to make sure the tests work. (They should fail at first.)
 - Get hacking on the problem, test when you think you've got it, and open a PR when it's done!
 
 ### Notes
