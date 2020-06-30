@@ -10,7 +10,7 @@ _Difficulty Rating: Medium_
 
 ### Objectives
 
-- Given an array of objects and a string. If a recipe's ingredients include the string return the name(s) of the recipe(s). 
+- The function takes 2 parameters. An object of data and a string. Inside the object you will find an array of objects, which are recipes. If a recipe's ingredients contain the string, return the recipes name. 
 - The output should return an array of the recipe(s) names.
 
 ### Getting Started
