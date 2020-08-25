@@ -11,3 +11,4 @@ console.log(getData(data, 'oil'))
 module.exports = {
     getData
 }
+// wop
